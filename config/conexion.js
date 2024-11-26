@@ -1,6 +1,6 @@
 const mysql = require("mysql");
 const db = mysql.createConnection({
-    host: "mysql.railway.internal",
+    host: "autorack.proxy.rlwy.net",
     user: "root",
     password: "cWgMMDSxXKsbafEqTyMuGvqpopLrVTro",
     database: "railway"
