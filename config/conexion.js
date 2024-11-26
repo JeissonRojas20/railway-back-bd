@@ -3,7 +3,8 @@ const db = mysql.createConnection({
     host: "autorack.proxy.rlwy.net",
     user: "root",
     password: "cWgMMDSxXKsbafEqTyMuGvqpopLrVTro",
-    database: "railway"
+    database: "railway",
+    port: 29106
 });
 
 db.connect(err => {
