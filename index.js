@@ -6,7 +6,6 @@ const orderRoutes = require('./routes/orderRoutes');
 const saleRoutes=require('./routes/saleRoutes');
 const cors = require("cors");
 const path = require('path'); 
-const { PORT } = require('./config.js')
 
 
 app.use(cors({
@@ -21,7 +20,7 @@ app.use('/products', productRoutes);
 app.use('/orders', orderRoutes);
 app.use('/sale', saleRoutes);
 
-app.listen(PORT,()=>{
-    console.log("Corriendo en el puerto",PORT);
+app.listen(3000,()=>{
+    console.log("Corriendo en el puerto 3000");
     
 })
