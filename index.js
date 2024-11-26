@@ -20,7 +20,7 @@ app.use('/products', productRoutes);
 app.use('/orders', orderRoutes);
 app.use('/sale', saleRoutes);
 
-app.listen(3000,()=>{
-    console.log("Corriendo en el puerto 3000");
+app.listen(3002,()=>{
+    console.log("Corriendo en el puerto 3002");
     
 })
