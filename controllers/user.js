@@ -28,7 +28,7 @@ const transporter = nodemailer.createTransport({
 // Función para enviar correo
 const sendWelcomeEmail = async (userData, password) => {
     const mailOptions = {
-        from: 'practicaenvio@gmail.com', // Usar el mismo correo configurado en el transporter
+        from: 'practicaenvio@gmail.com',
         to: userData.correo,
         subject: 'Bienvenido a Solo Electricos - Tus credenciales de acceso',
         html: `
@@ -112,7 +112,7 @@ const createUser = async (req, res) => {
 };
 
 const generateRecoveryCode = () => {
-    return Math.floor(100000 + Math.random() * 900000); // Código de 6 dígitos
+    return Math.floor(100000 + Math.random() * 900000); 
 };
 
 
