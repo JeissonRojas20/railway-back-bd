@@ -5,7 +5,7 @@ const path = require('path');
 // Función auxiliar para construir la URL completa de la imagen
 const buildImageUrl = (imagePath) => {
   if (!imagePath) return null;
-  return `http://localhost:3002${imagePath}`;
+  return `https://railway-back-bd-production.up.railway.app${imagePath}`;
 };
 
 // Creación de productos (modificado)
