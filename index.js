@@ -8,7 +8,7 @@ const cors = require("cors");
 const path = require('path'); 
 
 app.use(cors({
-    origin: 'https://vercel-front-m9znzxn0i-jeissonrojas20s-projects.vercel.app',
+    origin: 'https://vercel-front-ruby.vercel.app',
     credentials: true
 }));
 app.use(express.json());
