@@ -8,7 +8,7 @@ const cors = require("cors");
 const path = require('path'); 
 
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: 'https://vercel-front-gi7ode53m-jeissonrojas20s-projects.vercel.app/',
     credentials: true
 }));
 app.use(express.json());
