@@ -8,7 +8,7 @@ const cors = require("cors");
 const path = require('path'); 
 
 app.use(cors({
-    origin: 'https://vercel-front-ruby.vercel.app',
+    origin: 'http://localhost:3000',
     credentials: true
 }));
 app.use(express.json());
