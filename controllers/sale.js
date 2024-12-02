@@ -125,7 +125,7 @@ const sales = (req, res) => {
         dv.cantidad,
         dv.subtotal AS detalle_subtotal
       FROM
-        ventas 
+        ventas v
       JOIN detalle_venta dv ON v.id = dv.venta_id
       JOIN productos p ON dv.producto_id = p.id;
     `, (err, rows) => {
