@@ -264,7 +264,7 @@ const getOrdersByUserId = (req, res) => {
         ), 
       ']')
       FROM Detalle_Pedido dp
-      JOIN Productos pr ON dp.producto_Id = pr.id
+      JOIN productos pr ON dp.producto_Id = pr.id
       WHERE dp.pedido_Id = p.id
     ) as products
   FROM Pedido p
