@@ -111,22 +111,19 @@ const createVenta = (req, res) => {
   
 const sales = (req, res) => {
     db.query(`SELECT 
-  v.id AS venta_id, 
-  v.fecha_hora, 
-  v.descuento, 
-  v.subtotal AS venta_subtotal, 
-  v.total AS venta_total, 
-  v.metodo_pago, 
-  dv.producto_id, 
-  dv.cantidad, 
-  dv.precio_unitario, 
-  (dv.cantidad * dv.precio_unitario) AS detalle_subtotal
+ v.id AS venta_id, 
+ v.fecha_hora, 
+ v.descuento, 
+ v.subtotal AS venta_subtotal, 
+ v.total AS venta_total, 
+ v.metodo_pago, 
+ dv.producto_id, 
+ dv.cantidad, 
+ dv.precio_unitario, 
+ (dv.cantidad * dv.precio_unitario) AS detalle_subtotal
 FROM ventas v
 JOIN detalle_venta dv ON v.id = dv.venta_id
-WHERE v.usuario_id = ?
-
-
-    `, (err, rows) => {
+WHERE v.usuario_id = ?`, (err, rows) => {
       if (err) {
         console.error('Error al consultar ventas:', err);
         return res.status(500).json({ message: 'Error al obtener las ventas.' });
