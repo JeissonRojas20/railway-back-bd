@@ -110,25 +110,7 @@ const createVenta = (req, res) => {
   };
   
 const sales = (req, res) => {
-    db.query(`
-      // SELECT
-      //   v.id AS venta_id,
-      //   v.descuento,
-      //   v.subtotal AS venta_subtotal,
-      //   v.iva,
-      //   v.total AS venta_total,
-      //   v.metodo_pago,
-      //   v.fecha_hora,
-      //   p.id AS producto_id,
-      //   p.nombre AS producto_nombre,
-      //   p.precio AS precio_unitario,
-      //   dv.cantidad,
-      //   dv.subtotal AS detalle_subtotal
-      // FROM
-      //   ventas v
-      // JOIN detalle_venta dv ON v.id = dv.venta_id
-      // JOIN productos p ON dv.producto_id = p.id;
-SELECT v.id, v.fecha_hora, v.descuento, v.subtotal, v.total, v.metodo_pago, 
+    db.query(`SELECT v.id, v.fecha_hora, v.descuento, v.subtotal, v.total, v.metodo_pago, 
        dv.producto_id, dv.cantidad, dv.precio_unitario, (dv.cantidad * dv.precio_unitario) AS subtotal_producto
 FROM ventas v
 JOIN detalle_venta dv ON v.id = dv.venta_id
